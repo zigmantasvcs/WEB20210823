@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="button" value="OK">
+    <input type="text">
+    <input type="checkbox">
+    <input type="color">
+    <input type="radio"> -->
+
+    <h2>Prisijungimo forma</h2>
+
+    <form action="formos.php" method="POST">
+
+        <div>
+            <label for="username">Prisijungimo vardas</label>
+            <input type="text" id="username" name="username" autocomplete="off" required>
+        </div>
+
+        <div>
+            <label for="password">Slaptažodis</label>
+            <input type="password" id="password" name="password" autocomplete="off">
+        </div>
+
+        <div>
+            <input type="submit" value="Pateikti">
+        </div>
+
+    </form>
+
+    <fieldset>
+        <legend>Prisijungimas</legend>
+        <table>
+            <tr>
+                <td><label for="username">Prisijungimo vardas</label></td>
+                <td><input type="text" id="username" name="username" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Slaptažodis</label></td>
+                <td><input type="password" id="password" name="password" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Pateikti"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <div>
+        <label for="">Pasirinkite mėgstamą spalvą:</label>
+        <input type="radio" name="color" value="Mėlyna"> Mėlyna
+        <input type="radio" name="color"> Žalia
+        <input type="radio" name="color"> Raudona
+    </div>
+
+    <div>
+        <label for="">Pasirinkite lytį:</label>
+        <select name="" id="">
+            <option value="V">Vyras</option>
+            <option value="M">Moteris</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="">Parašykite komentarą</label>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Parašykite komentarą"></textarea>
+    </div>
+
+
+</body>
+
+</html>
