@@ -1,0 +1,75 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.child {
+    width: 25%;
+    /* margin: 5px; */
+}
+
+div.content {
+    margin: 5px;
+    background-color: rgb(252, 210, 203);
+    min-height: 200px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin: auto;
+    width: 70%;
+}
+
+/* siauriems ekranams */
+@media screen and (max-width:600px) {
+    div.child {
+        width: 100%;
+    }
+
+    .container{
+        width: 100%;
+    }
+}
+
+/* vidutiniams ekranams */
+@media screen and (min-width:601px) and (max-width:900px) {
+    div.child {
+        width: 33%;
+    }
+
+    .container{
+        width: 90%;
+    }
+}
+
+img {
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+header{
+    background-image: url("fonas.jfif");
+    background-size: cover;
+}
+
+header h1{
+    padding: 100px;
+    text-align: center;
+}
+
+footer address{
+    padding: 50px;
+    text-align: center;
+    color: white;
+    font-size: 20pt;
+}
+
+footer{
+    background-color: black;
+}
+
+/* body{
+    background-image: url("wall.jpg");
+    background-size: contain;
+} */

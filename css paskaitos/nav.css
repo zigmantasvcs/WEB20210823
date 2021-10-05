@@ -1,0 +1,23 @@
+ul{
+    list-style-type: none;
+}
+
+nav ul{
+    display: flex;
+    background-color: black;
+    padding: 8px;
+    justify-content: center;
+}
+
+nav ul li a{
+    padding: 8px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    background-color: white;
+    color: black;
+}
