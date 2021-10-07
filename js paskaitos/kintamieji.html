@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="x">
+    <input type="text" id="y">
+    <input type="button" value="ok" id="button">
+    <h1 id="result">0</h1>
+
+    <script>
+        // var a = "a";
+
+        // let b = 2; // let rekomenuotinas
+
+        // let sum = a + b;
+
+        // document.querySelector("body").innerText = sum;
+
+        document.querySelector("#button").addEventListener("click", function(){
+            let x = document.querySelector("#x").value; // tik formos elementai turi value
+            let y = document.querySelector("#y").value;
+
+            let sum = Number(x) + Number(y);
+
+            document.querySelector("#result").innerText = "<i>" + sum + "</i>";
+        })
+
+
+
+    </script>
+</body>
+</html>
