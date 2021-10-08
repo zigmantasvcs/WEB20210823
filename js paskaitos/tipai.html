@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="name" value="Jonas">
+    <input type="text" id="surname" value="Jonaitis">
+
+    <script>
+
+        // Skaičiai
+        let firstNumber = 5.2;
+        let secondNumber = 10;
+        console.log(firstNumber + secondNumber);
+
+        let firstNumber1 = "5.2"; // jeigu stringas tada sumoje viskas yra stringas
+        let secondNumber1 = 10;
+        console.log(Number(firstNumber1) + secondNumber1);
+
+        // Tesktas
+
+        let name = document.getElementById("name").value;
+        let surname = document.getElementById("surname").value;
+
+        // su +
+        console.log(name + " " + surname);
+        
+        // su concat
+        let connected = name.concat(" ", surname);
+        console.log(connected);
+
+        // indexOf
+        let text = "Laba diena, graži diena";
+        let position = text.indexOf("labas"); // kai grazinamas -1 reiskas nerastas tekstas
+        console.log(position);
+
+        // substring
+        let newText = text.substring(0, 10);
+        console.log(newText);
+
+        // split
+        let words = text.split("a"); // gal;ima panaudoti dirbant su csv failais  name;surname;age;weigth
+        console.log(words);
+
+        // array
+        console.log(words[1]);
+
+
+        // BOOLEAN
+        let flag = false;
+
+        if(flag){
+            console.log("flag is true");
+        }
+        else{
+            console.log("flag is false");
+        }
+
+        let a = 5;
+        let b = 1;
+        let flag1 = a > b;
+
+        if(a > b){
+            console.log("flag is true");
+        }
+        else{
+            console.log("flag is false");
+        }
+
+        // while(flag1){
+        //     console.log("falg is true");
+        // }
+
+        // for ciklas
+        for (let index = 0; index < 5; index++) {
+            console.log(index);
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="name">
+    <input type="button" value="+" id="btn">    
+
+    <ul id="names"></ul>
+
+    <script>
+        let names = ["Jonas", "Ona"];
+        //names.push("Petras");
+
+        document.getElementById("btn").addEventListener("click", function(){
+            let name = document.getElementById("name").value;
+            names.push(name);
+
+            document.getElementById("names").innerHTML = "";
+
+            let liItems = "";
+            for (let index = 0; index < names.length; index++) {
+                const element = names[index];
+
+                liItems += "<li>" + element + "</li>";
+                
+            }
+            document.getElementById("names").innerHTML = liItems;
+            console.log(names);
+        });
+
+        //console.log(names);
+
+    </script>
+</body>
+</html>
