@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    
+
+    <script>
+        // objektai
+        let student1 = {
+            name: "Jonas",
+            surname: "Jonaitis",
+            birthDay: "2003-09-01",
+            age: 18,
+            documentId: "aaa001"
+        };
+
+        let student2 = {
+            name: "Onutė",
+            surname: "Pakalnutė",
+            birthDay: "2003-09-01",
+            age: 18,
+            documentId: "aaa002"
+        };
+
+        let student3 = {
+            name: "Petras",
+            surname: "Petraitis",
+            birthDay: "2002-09-01",
+            age: 19,
+            documentId: "aaa003"
+        };
+
+        let students = [student1, student2, student3];
+
+        for (let index = 0; index < students.length; index++) {
+            const student = students[index];
+            
+            let divElement = document.createElement("div");
+            divElement.innerText = student.name + " " + student.surname + " " + student.age;
+            document.getElementById("container").appendChild(divElement);
+        }
+
+        console.log(students);
+
+        console.log(student1.name);
+
+        console.log(student1);
+
+    </script>
+</body>
+</html>

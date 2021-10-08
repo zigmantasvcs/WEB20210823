@@ -23,5 +23,5 @@ function displayItems(array, container){
         innerItems += "<div>"+ element +"</div>";
     }
 
-    container.innerHtml = innerItems;
+    container.innerHTML = innerItems;
 }

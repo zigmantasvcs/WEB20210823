@@ -25,8 +25,9 @@
     </nav>
 
     <div class="container">
-        <div class="row">
-            <div class="child">
+        <div class="row" id="items">
+
+            <!-- <div class="child">
                 <div class="content">
                     <img src="badcat.jpg" alt="">
                     <p>Parduodamas blogas katinas</p>
@@ -76,7 +77,7 @@
 
             <div class="child">
                 <div class="content">D</div>
-            </div>
+            </div> -->
 
         </div>
     </div>
@@ -85,6 +86,11 @@
         <address>zigmantasvcs@gmail.com</address>
     </footer>
 
+    <script src="js/library.js"></script>
+    <script>
+        let items = getItems();
+        displayItems(items, document.getElementById("items"));
+    </script>
 </body>
 
 </html>
