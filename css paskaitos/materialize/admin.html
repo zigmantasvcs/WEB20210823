@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+
+
+
+<body>
+
+    <div class="row container">
+        <h1>Sukurti studentą</h1>
+        <form class="col s12">
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="name" type="text" class="validate" autocomplete="off">
+                    <label for="name">Vardas</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="surname" type="text" class="validate">
+                    <label for="surname">Pavardė</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="documentId" type="text" class="validate">
+                    <label for="documentId">Dokumento numeris</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="photo" type="text" class="validate">
+                    <label for="photo">Nuotraukos nuoroda</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="birthDay" type="text" class="datepicker validate">
+                    <label for="birthDay">Gimimo data</label>
+                </div>
+            </div>
+
+            <button class="btn waves-effect waves-light" id="send">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/studentsClient.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.datepicker');
+            let options = {format:"yyyy-mm-dd"};
+            var instances = M.Datepicker.init(elems, options);
+        });
+    </script>
+    <script>
+        document.getElementById("send").addEventListener("click", function(){
+            event.preventDefault();
+
+            let student = {
+                name: document.getElementById("name").value,
+                surname: document.getElementById("surname").value,
+                photo: document.getElementById("photo").value,
+                documentId: document.getElementById("documentId").value,
+                birthDay: document.getElementById("birthDay").value
+            };
+
+            createStudent(student).then(response => console.log(response))
+
+        })
+    </script>
+</body>
